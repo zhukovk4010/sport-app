@@ -1,0 +1,25 @@
+.tabbar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2b5224;
+    box-shadow: 1px 1px 10px #1fd200;
+}
+
+.tabbar > button {
+    padding: 1em;
+    border: none;
+    background: transparent;
+}
+
+.tabbar > button > h5 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.tabbar > button > img {
+    width: 2em;
+}

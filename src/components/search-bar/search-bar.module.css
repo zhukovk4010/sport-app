@@ -1,0 +1,29 @@
+.search_bar {
+    position: fixed;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    top: 1em;
+    left: 10%;
+    right: 10%;
+    background-color: #2b5224;
+    border-radius: 1em;
+    box-shadow: 1px 1px 10px #1fd200;
+}
+
+.search_bar > input {
+    border: none;
+    height: 100%;
+    flex: 1;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.search_bar > input:focus {
+    outline: none;
+}
+
+.search_bar > img {
+    width: 2em;
+}

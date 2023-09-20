@@ -1,0 +1,10 @@
+.scaleButton {
+    background-color: #2b5224;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 2rem;
+    padding: 0 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 10px #1fd200;
+}

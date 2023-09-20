@@ -1,0 +1,13 @@
+.communityPage {
+    margin-bottom: 11em;
+}
+
+.communityPage__addPostButtonContainer {
+    position: fixed;
+    left: 1em;
+    bottom: 6em;
+}
+
+.communityPage > div + div {
+    margin-top: 2em;
+}

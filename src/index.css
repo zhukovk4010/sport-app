@@ -1,12 +1,17 @@
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-size: 1em;
     box-sizing: border-box;
+    font-size: 1em;
     color: #fff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
     background-color: #052300;
-    box-sizing: inherit;
 }

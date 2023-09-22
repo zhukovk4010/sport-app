@@ -5,8 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #2b5224;
-    box-shadow: 1px 1px 10px #1fd200;
+    background: linear-gradient(transparent, #000000 50%);
 }
 
 .tabbar > button {

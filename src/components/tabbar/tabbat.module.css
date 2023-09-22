@@ -11,7 +11,6 @@
 .tabbar__link {
     text-align: center;
     display: block;
-    color: #ffffff;
     padding: 1em;
     border: none;
     background: transparent;
@@ -24,6 +23,10 @@
     color: #ffffff;
 }
 
-.tabbar__link > img {
+img {
     width: 2em;
+}
+
+.active > h5 {
+    color: #1fd200;
 }

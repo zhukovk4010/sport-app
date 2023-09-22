@@ -1,0 +1,32 @@
+.tabbar {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, #000000 50%);
+}
+
+.tabbar__link {
+    text-align: center;
+    display: block;
+    padding: 1em;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+}
+
+.tabbar__link > h5 {
+    font-size: 0.6rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+img {
+    width: 2em;
+}
+
+.active > h5 {
+    color: #1fd200;
+}

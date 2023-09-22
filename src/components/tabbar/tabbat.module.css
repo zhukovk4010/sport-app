@@ -8,17 +8,22 @@
     background: linear-gradient(transparent, #000000 50%);
 }
 
-.tabbar > button {
+.tabbar__link {
+    text-align: center;
+    display: block;
+    color: #ffffff;
     padding: 1em;
     border: none;
     background: transparent;
+    text-decoration: none;
 }
 
-.tabbar > button > h5 {
+.tabbar__link > h5 {
+    font-size: 0.6rem;
     margin: 0;
     color: #ffffff;
 }
 
-.tabbar > button > img {
+.tabbar__link > img {
     width: 2em;
 }

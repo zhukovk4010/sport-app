@@ -2,11 +2,11 @@
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import CommunityPage from 'src/pages/community/community-page'
-import MapPage from 'src/pages/map/map-page'
+import CommunityPage from 'src/pages/community-page/community-page'
+import MapPage from 'src/pages/map-page/map-page'
 import Tabbar from '../tabbar/tabbat'
-import ProfilePage from 'src/pages/profile/profile-page'
-import SettingsPage from 'src/pages/settings/settings'
+import ProfilePage from 'src/pages/profile-page/profile-page'
+import SettingsPage from 'src/pages/settings-page/settings'
 
 const App = () => {
     const router = createBrowserRouter([

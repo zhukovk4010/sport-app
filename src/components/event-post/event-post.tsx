@@ -1,15 +1,23 @@
+import { PostType } from 'src/redux/slices/postsSlice'
 import styles from './event-post.module.css'
 
-const EventPost = () => {
+type PropsType = {
+    post: PostType
+}
+
+const EventPost = ({ post }: PropsType) => {
+    console.log(post)
     return (
         <section className={styles.eventPost}>
-            <h3>Футбол</h3>
+            <h3>{post.title}</h3>
             <div className={styles.eventPost__body}>
-                <div>Г. Подольск</div>
-                <div className={styles.eventPost__body__peopleCounter}>1/8</div>
-                <div>ср. 20 сен. 2023 г.</div>
+                <div>{post.city}</div>
+                <div
+                    className={styles.eventPost__body__peopleCounter}
+                >{`${post.activeNumberOfPerson}/${post.numberOfPersons}`}</div>
+                <div>{post.time}</div>
                 <div className={styles.eventPost__body__author}>
-                    Жуков Кирилл
+                    {post.author}
                 </div>
             </div>
         </section>

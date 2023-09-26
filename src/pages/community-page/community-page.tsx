@@ -2,21 +2,14 @@ import AddPostButton from 'src/components/buttons/add-post-button/add-post-butto
 import styles from './community-page.module.css'
 
 import EventPost from 'src/components/event-post/event-post'
+import { useAppSelector } from 'src/hooks/store-hooks'
 
 const CommunityPage = () => {
+    const posts = useAppSelector((state) => state.posts.postsList)
+
     return (
         <div className={styles.communityPage}>
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
-            <EventPost />
+            <EventPost post={posts[0]} />
             <div className={styles.communityPage__addPostButtonContainer}>
                 <AddPostButton />
             </div>

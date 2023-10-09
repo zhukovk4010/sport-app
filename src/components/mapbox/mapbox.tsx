@@ -1,6 +1,8 @@
 import mapboxgl from 'mapbox-gl'
 import { useEffect, useRef, useState } from 'react'
 
+import styles from './mapbox.module.css'
+
 type MapPropsType = {
     initialOptions?: Omit<mapboxgl.MapboxOptions, 'container'>
     onCreated?(map: mapboxgl.Map): void
@@ -47,7 +49,7 @@ const MapboxMap = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    return <div ref={mapNode} style={{ width: '100%', height: '100%' }} />
+    return <div ref={mapNode} className={styles.map} />
 }
 
 export default MapboxMap

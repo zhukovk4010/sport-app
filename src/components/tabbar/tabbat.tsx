@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 
 import iconMap from 'src/assets/icons/map-icon.svg'
 import iconMapActive from 'src/assets/icons/map-icon-active.svg'
@@ -16,28 +15,22 @@ const setActive = ({ isActive }: { isActive: unknown }) =>
     isActive ? `${styles.tabbar__link} ${styles.active}` : styles.tabbar__link
 
 const Tabbar = () => {
-    const [activeIcon, setActiveIcon] = useState('map')
+    const location = useLocation()
+    const activeIconRoute = location.pathname
+
     return (
         <nav className={styles.tabbar}>
-            <NavLink
-                to='/'
-                className={setActive}
-                onClick={() => setActiveIcon('map')}
-            >
+            <NavLink to='/' className={setActive}>
                 <img
-                    src={activeIcon === 'map' ? iconMapActive : iconMap}
+                    src={activeIconRoute === '/' ? iconMapActive : iconMap}
                     alt=''
                 />
                 <h5>Карта</h5>
             </NavLink>
-            <NavLink
-                to='/community'
-                className={setActive}
-                onClick={() => setActiveIcon('community')}
-            >
+            <NavLink to='/community' className={setActive}>
                 <img
                     src={
-                        activeIcon === 'community'
+                        activeIconRoute === '/community'
                             ? iconСommunityActive
                             : iconСommunity
                     }
@@ -45,14 +38,10 @@ const Tabbar = () => {
                 />
                 <h5>Сообщество</h5>
             </NavLink>
-            <NavLink
-                to='/profile'
-                className={setActive}
-                onClick={() => setActiveIcon('profile')}
-            >
+            <NavLink to='/profile' className={setActive}>
                 <img
                     src={
-                        activeIcon === 'profile'
+                        activeIconRoute === '/profile'
                             ? iconProfileActive
                             : iconProfile
                     }
@@ -60,14 +49,10 @@ const Tabbar = () => {
                 />
                 <h5>Профиль</h5>
             </NavLink>
-            <NavLink
-                to='/settings'
-                className={setActive}
-                onClick={() => setActiveIcon('settings')}
-            >
+            <NavLink to='/settings' className={setActive}>
                 <img
                     src={
-                        activeIcon === 'settings'
+                        activeIconRoute === '/settings'
                             ? iconSettingsActive
                             : iconSettings
                     }

@@ -13,12 +13,10 @@ const MapPage = () => {
 
     return (
         <>
-            <div style={{ width: '100%', height: '100%' }}>
-                <MapboxMap
-                    initialOptions={{ center: [37.62, 55.75] }}
-                    onLoaded={handleMapLoading}
-                />
-            </div>
+            <MapboxMap
+                initialOptions={{ center: [37.62, 55.75] }}
+                onLoaded={handleMapLoading}
+            />
 
             {loading && <Preloader />}
 

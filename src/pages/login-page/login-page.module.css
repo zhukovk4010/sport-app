@@ -1,0 +1,44 @@
+.loginPage {
+    padding: 1em 0.5em 5em;
+    height: 100%;
+    text-align: center;
+}
+
+.loginPage__backLink {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    color: #1fd200;
+    text-decoration: none;
+    padding: 0.5em 0.5em;
+    background-color: #212121;
+    box-shadow: 1px 1px 10px #1fd200;
+    border-radius: 1em;
+}
+
+.loginPage__backLink > img {
+    height: 1.1em;
+}
+
+.loginPage__backLink > p {
+    margin: 0;
+}
+
+.loginPage > h2 {
+    margin: 0;
+    margin-top: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.loginPage__registerLink {
+    color: #1fd200;
+    text-decoration: none;
+    line-height: 1.1em;
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    background-color: #212121;
+    box-shadow: 1px 1px 10px #1fd200;
+    border-radius: 1em;
+    margin-top: 1em;
+}

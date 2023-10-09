@@ -8,12 +8,10 @@ const CommunityPage = () => {
     const posts = useAppSelector((state) => state.posts.postsList)
 
     return (
-        <div className={styles.communityPage}>
+        <main className={styles.communityPage}>
             <EventPost post={posts[0]} />
-            <div className={styles.communityPage__addPostButtonContainer}>
-                <AddPostButton />
-            </div>
-        </div>
+            <AddPostButton />
+        </main>
     )
 }
 

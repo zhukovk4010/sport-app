@@ -1,0 +1,41 @@
+.form {
+    padding: 1em 2em;
+    border: 1px solid #1fd200;
+    border-radius: 1em;
+    box-shadow: 1px 1px 10px #1fd200;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__control + .form__control {
+    margin-top: 1em;
+}
+
+.form__control > input {
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #212121;
+    box-shadow: 1px 1px 10px #1fd200;
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em 0.25em;
+}
+
+.form__control > input:focus {
+    outline: none;
+}
+
+.form__submitButton {
+    margin-top: 1em;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    color: #fff;
+    background-color: #212121;
+    box-shadow: 1px 1px 10px #1fd200;
+    border: none;
+    border-radius: 1em;
+}

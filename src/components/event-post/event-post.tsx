@@ -1,12 +1,11 @@
 import { PostType } from 'src/redux/slices/postsSlice'
-import styles from './event-post.module.css'
+import styles from './event-post.module.pcss'
 
 type PropsType = {
     post: PostType
 }
 
 const EventPost = ({ post }: PropsType) => {
-    console.log(post)
     return (
         <section className={styles.eventPost}>
             <h3>{post.title}</h3>

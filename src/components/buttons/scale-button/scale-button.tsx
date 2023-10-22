@@ -1,4 +1,4 @@
-import styles from './scale-button.module.css'
+import styles from './scale-button.module.pcss'
 
 type PropsType = {
     type: 'increase' | 'decrease'

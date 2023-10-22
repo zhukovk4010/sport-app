@@ -53,6 +53,7 @@ const App = () => {
             element: (
                 <>
                     <LoginPage />
+                    <Tabbar />
                 </>
             ),
         },
@@ -61,6 +62,7 @@ const App = () => {
             element: (
                 <>
                     <RegisterPage />
+                    <Tabbar />
                 </>
             ),
         },

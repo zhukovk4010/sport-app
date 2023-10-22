@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useAppDispatch } from 'src/hooks/store-hooks'
 import Form from '../form/form'
 import { auth } from 'src/firebase'
-import { setUser } from 'src/redux/slices/userSlice'
+import {setUser} from "src/redux/slices/userSlice.ts";
 
 const SignUp = () => {
     const dispatch = useAppDispatch()
@@ -22,7 +22,12 @@ const SignUp = () => {
             })
             .catch(console.error)
     }
-    return <Form title='Регистрация' handleClick={handleRegister} />
+    return (
+        <Form
+            title='Регистрация'
+            submitForm={handleRegister}
+        />
+    )
 }
 
 export default SignUp

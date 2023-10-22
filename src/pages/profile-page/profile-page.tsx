@@ -1,5 +1,5 @@
 import avatarImg from 'src/assets/img/avatar.jpg'
-import styles from './profile-page.module.css'
+import styles from './profile-page.module.pcss'
 import { useAppSelector } from 'src/hooks/store-hooks'
 import { Link } from 'react-router-dom'
 
@@ -7,7 +7,7 @@ const ProfilePage = () => {
     const user = useAppSelector((state) => state.user)
     if (user.id) {
         return (
-            <div className={styles.profilePage}>
+            <main className={styles.profilePage}>
                 <div className={styles.profilePage__avatarContainer}>
                     <img className={styles.avatarImg} src={avatarImg} alt='' />
                 </div>
@@ -27,18 +27,18 @@ const ProfilePage = () => {
                 <div className={styles.profilePage__fullNameContainer}>
                     Достижения
                 </div>
-            </div>
+            </main>
         )
     }
     return (
-        <div className={styles.profilePage}>
+        <main className={styles.profilePage}>
             <Link
                 className={styles.profilePage__authorizationButton}
                 to='/login'
             >
                 Войти
             </Link>
-        </div>
+        </main>
     )
 }
 

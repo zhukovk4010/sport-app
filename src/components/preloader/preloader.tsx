@@ -1,6 +1,6 @@
 import loaderGif from 'src/assets/loader/loader.gif'
 
-import styles from './preloader.module.css'
+import styles from './preloader.module.pcss'
 
 const Preloader = () => {
     return (

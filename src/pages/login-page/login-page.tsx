@@ -3,7 +3,7 @@ import Login from 'src/components/firebase/login/login'
 
 import iconBack from 'src/assets/icons/back-icon.svg'
 
-import styles from './login-page.module.css'
+import styles from './login-page.module.pcss'
 
 const LoginPage = () => {
     return (

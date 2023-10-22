@@ -4,7 +4,7 @@ import ScaleButton from 'src/components/buttons/scale-button/scale-button'
 import SearchBar from 'src/components/search-bar/search-bar'
 import MapboxMap from 'src/components/mapbox/mapbox'
 
-import styles from './map-page.module.css'
+import styles from './map-page.module.pcss'
 import Preloader from 'src/components/preloader/preloader'
 
 const MapPage = () => {

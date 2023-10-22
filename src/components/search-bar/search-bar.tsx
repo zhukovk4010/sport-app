@@ -1,4 +1,4 @@
-import styles from './search-bar.module.css'
+import styles from './search-bar.module.pcss'
 import iconBell from 'src/assets/icons/bell-icon.svg'
 
 const SearchBar = () => {

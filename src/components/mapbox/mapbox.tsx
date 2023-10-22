@@ -1,7 +1,7 @@
 import mapboxgl from 'mapbox-gl'
 import { useEffect, useRef, useState } from 'react'
 
-import styles from './mapbox.module.css'
+import styles from './mapbox.module.pcss'
 
 type MapPropsType = {
     initialOptions?: Omit<mapboxgl.MapboxOptions, 'container'>

@@ -1,5 +1,5 @@
 import iconAddPost from 'src/assets/icons/add-post-icon.svg'
-import styles from './add-post-button.module.css'
+import styles from './add-post-button.module.pcss'
 
 const AddPostButton = () => {
     return (

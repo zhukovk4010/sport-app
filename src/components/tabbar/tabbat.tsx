@@ -2,14 +2,14 @@ import { NavLink, useLocation } from 'react-router-dom'
 
 import iconMap from 'src/assets/icons/map-icon.svg'
 import iconMapActive from 'src/assets/icons/map-icon-active.svg'
-import iconСommunity from 'src/assets/icons/community-icon.svg'
-import iconСommunityActive from 'src/assets/icons/community-icon-active.svg'
+import iconCommunity from 'src/assets/icons/community-icon.svg'
+import iconCommunityActive from 'src/assets/icons/community-icon-active.svg'
 import iconProfile from 'src/assets/icons/profile-icon.svg'
 import iconProfileActive from 'src/assets/icons/profile-icon-active.svg'
 import iconSettings from 'src/assets/icons/settings-icon.svg'
 import iconSettingsActive from 'src/assets/icons/settings-icon-active.svg'
 
-import styles from './tabbat.module.css'
+import styles from './tabbat.module.pcss'
 
 const setActive = ({ isActive }: { isActive: unknown }) =>
     isActive ? `${styles.tabbar__link} ${styles.active}` : styles.tabbar__link
@@ -31,8 +31,8 @@ const Tabbar = () => {
                 <img
                     src={
                         activeIconRoute === '/community'
-                            ? iconСommunityActive
-                            : iconСommunity
+                            ? iconCommunityActive
+                            : iconCommunity
                     }
                     alt=''
                 />

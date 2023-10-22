@@ -1,5 +1,5 @@
 import avatarImg from 'src/assets/img/avatar.jpg'
-import styles from './profile-page.module.css'
+import styles from './profile-page.module.pcss'
 import { useAppSelector } from 'src/hooks/store-hooks'
 import { Link } from 'react-router-dom'
 

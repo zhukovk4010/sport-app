@@ -1,5 +1,5 @@
 import AddPostButton from 'src/components/buttons/add-post-button/add-post-button'
-import styles from './community-page.module.css'
+import styles from './community-page.module.pcss'
 
 import EventPost from 'src/components/event-post/event-post'
 import { useAppSelector } from 'src/hooks/store-hooks'

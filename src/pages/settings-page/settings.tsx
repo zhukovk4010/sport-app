@@ -1,5 +1,5 @@
 import { useAppDispatch } from 'src/hooks/store-hooks'
-import styles from './settings.module.css'
+import styles from './settings.module.pcss'
 import { removeUser } from 'src/redux/slices/userSlice'
 
 const SettingsPage = () => {

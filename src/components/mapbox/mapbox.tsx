@@ -16,7 +16,7 @@ const MapboxMap = ({
     onLoaded,
     onRemoved,
 }: MapPropsType) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    // @ts-ignore
     const [map, setMap] = useState<mapboxgl.Map>()
 
     const mapNode = useRef(null)

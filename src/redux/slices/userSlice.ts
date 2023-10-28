@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export type UserType = {
+export interface IUser {
     id: number | null
     login: string | null
     email: string | null
@@ -9,7 +9,7 @@ export type UserType = {
     city: string | null
 }
 
-const initialState: UserType = {
+const initialState: IUser = {
     id: null,
     login: null,
     email: null,

@@ -1,26 +1,28 @@
-import {useId} from "react";
+import { useId } from 'react'
 import styles from './form.module.pcss'
-import {useForm} from "react-hook-form";
+import { useForm } from 'react-hook-form'
 
-
-type FormDataType = {
+interface IFormData {
     email: string
     password: string
     rememberMe: boolean
 }
 
-type FormPropsType = {
+interface IProps {
     title: string
     submitForm: (email: string, password: string) => void
 }
 
-const Form = ({title, submitForm}: FormPropsType) => {
-
+const Form = ({ title, submitForm }: IProps) => {
     const id = useId()
 
-    const {register, handleSubmit, formState: {isSubmitted, errors}} = useForm<FormDataType>()
+    const {
+        register,
+        handleSubmit,
+        formState: { isSubmitted, errors },
+    } = useForm<IFormData>()
 
-    const onSubmit = (data: FormDataType) => {
+    const onSubmit = (data: IFormData) => {
         submitForm(data.email, data.password)
     }
 
@@ -28,37 +30,62 @@ const Form = ({title, submitForm}: FormPropsType) => {
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.form__control}>
                 <label htmlFor={`${id}-email`}>Электронная почта</label>
-                <input id={`${id}-email`}
-                       aria-describedby={`${id}-email-error-message`}
-                       type="email" autoComplete="email"
-                       {...register('email',
-                           {required: 'The field is required'})} />
+                <input
+                    id={`${id}-email`}
+                    aria-describedby={`${id}-email-error-message`}
+                    type='email'
+                    autoComplete='email'
+                    {...register('email', {
+                        required: 'The field is required',
+                    })}
+                />
 
-                {errors.email && <p id={`${id}-email-error-message`}
-                                    aria-live="assertive">{errors.email.message}</p>}
+                {errors.email && (
+                    <p id={`${id}-email-error-message`} aria-live='assertive'>
+                        {errors.email.message}
+                    </p>
+                )}
             </div>
 
             <div className={styles.form__control}>
                 <label htmlFor={`${id}-password`}>Пароль</label>
-                <input id={`${id}-password`}
-                       aria-describedby={`${id}-password-error-message`}
-                       type="password" autoComplete="current-password"
-                       {...register('password',
-                           {
-                               required: 'The field is required',
-                               minLength: {value: 8, message: 'min length is 8'}
-                           })}/>
+                <input
+                    id={`${id}-password`}
+                    aria-describedby={`${id}-password-error-message`}
+                    type='password'
+                    autoComplete='current-password'
+                    {...register('password', {
+                        required: 'The field is required',
+                        minLength: { value: 8, message: 'min length is 8' },
+                    })}
+                />
 
-                {errors.password && <p id={`${id}-password-error-message`}
-                                       aria-live="assertive">{errors.password.message}</p>}
+                {errors.password && (
+                    <p
+                        id={`${id}-password-error-message`}
+                        aria-live='assertive'
+                    >
+                        {errors.password.message}
+                    </p>
+                )}
             </div>
 
             <div className={styles.form__control}>
                 <label htmlFor={`${id}-rememberMe`}>Запомнить меня</label>
-                <input id={`${id}-rememberMe`} type="checkbox" {...register('rememberMe')}/>
+                <input
+                    id={`${id}-rememberMe`}
+                    type='checkbox'
+                    {...register('rememberMe')}
+                />
             </div>
 
-            <button className={styles.form__submitButton} disabled={isSubmitted} type="submit">{title}</button>
+            <button
+                className={styles.form__submitButton}
+                disabled={isSubmitted}
+                type='submit'
+            >
+                {title}
+            </button>
         </form>
     )
 }

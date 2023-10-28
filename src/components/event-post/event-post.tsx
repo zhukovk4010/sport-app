@@ -1,11 +1,11 @@
-import { PostType } from 'src/redux/slices/postsSlice'
+import { IPost } from 'src/redux/slices/postsSlice'
 import styles from './event-post.module.pcss'
 
-type PropsType = {
-    post: PostType
+type IProps = {
+    post: IPost
 }
 
-const EventPost = ({ post }: PropsType) => {
+const EventPost = ({ post }: IProps) => {
     return (
         <section className={styles.eventPost}>
             <h3>{post.title}</h3>

@@ -1,11 +1,11 @@
 import styles from './scale-button.module.pcss'
 
-type PropsType = {
+interface IProps {
     type: 'increase' | 'decrease'
     sign: '+' | '&#8211;'
 }
 
-const ScaleButton = ({ type, sign }: PropsType) => {
+const ScaleButton = ({ type, sign }: IProps) => {
     return (
         <button
             className={styles.scaleButton}

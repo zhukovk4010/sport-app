@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 
 import styles from './mapbox.module.pcss'
 
-type MapPropsType = {
+interface IProps {
     initialOptions?: Omit<mapboxgl.MapboxOptions, 'container'>
     onCreated?(map: mapboxgl.Map): void
     onLoaded?(map: mapboxgl.Map): void
@@ -15,8 +15,7 @@ const MapboxMap = ({
     onCreated,
     onLoaded,
     onRemoved,
-}: MapPropsType) => {
-    // @ts-ignore
+}: IProps) => {
     const [map, setMap] = useState<mapboxgl.Map>()
 
     const mapNode = useRef(null)

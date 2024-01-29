@@ -12,7 +12,6 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "autoprefixer": "^10.4.16",
-    "firebase": "^10.4.0",
     "mapbox-gl": "^2.15.0",
     "postcss-nested": "^6.0.1",
     "postcss-simple-vars": "^7.0.1",

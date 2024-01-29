@@ -1,5 +1,3 @@
-// import styles from './App.css'
-
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import CommunityPage from 'src/pages/community-page/community-page'

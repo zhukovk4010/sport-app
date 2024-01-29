@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export type PostType = {
+export interface IPost {
     id: number
     title: 'Футбол' | 'Баскетбол' | 'Теннис' | 'Волейбол' | 'Хоккей'
     body: string
@@ -11,11 +11,11 @@ export type PostType = {
     author: string
 }
 
-export type PostsType = {
-    postsList: PostType[]
+export interface IPosts {
+    postsList: IPost[]
 }
 
-const initialState: PostsType = {
+const initialState: IPosts = {
     postsList: [
         {
             id: 1,
